@@ -19,9 +19,9 @@
 - 
 
 ## Bibliotecas 📚
-* IDE [ Kafka ](https://kafka.apache.org/documentation/)
-* IDE [ Spark ](https://spark.apache.org/docs/latest/)
-* IDE [ Python ](https://docs.python.org/pt-br/3/)
+* [ Kafka ](https://kafka.apache.org/documentation/)
+* [ Spark ](https://spark.apache.org/docs/latest/)
+* [ Python ](https://docs.python.org/pt-br/3/)
 
 ----------------------------
 ## Colaboradores 🧤
