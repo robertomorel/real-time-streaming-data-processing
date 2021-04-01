@@ -44,7 +44,7 @@ Pode ser visto como um sistema de publisher qsubscriber, como o Youtube, mas com
 
 ### Setup do Kafka
 #### 1. Download
-bash```
+```bash
 curl http://ftp.unicamp.br/pub/apache/kafka/2.7.0/kafka_2.12-2.7.0.tgz -o ~/Downloads/kafka.tgz
 ```
 
