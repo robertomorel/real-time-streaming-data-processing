@@ -73,7 +73,7 @@ bin/kafka-server-start.sh config/server.properties
 ### Exemplo
 Utilizando os comandos (CLI) do Apache KAFKA, vamos criar o seguinte esquema de troca de mensagens via streaming de dados
 
-<img src="https://raw.githubusercontent.com/robertomorel/real-time-streaming-data-processing/master/assets/kafka-cli.jpeg" alt="Esquema, Roberto's header" width="400"/>
+<img src="https://raw.githubusercontent.com/robertomorel/real-time-streaming-data-processing/master/assets/kafka-cli.jpeg" alt="Esquema, Roberto's header" width="500"/>
 
 ## Projetos 📥
 
