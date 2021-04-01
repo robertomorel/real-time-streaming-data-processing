@@ -1,9 +1,46 @@
 # Streaming de Dados em Tempo Real
 
 ## Conceitos ✒️
+Também conhecido como Evento de Processamento de Streaming, Streaming de Dados trata do fluxo contínuo de geração de dados à partir de fontes diversas.
+Utilizando este tipo de tecnologia, streaming de dados podem ser consumidos, processados, armazenados e analisados conforme estes são gerados em tempo real.
 
+Streaming é o conceito usado para descrever um fluxo contínuo - sem início ou fim - que provê uma contante carga de dados que pode ser utilizada sem a necessidade prévia de download.
+Streaming de Dados, de modo semelhante, são gerados por várias fontes e formatos distintos e com volumes variáveis, como por exemplo: aplicações WEB/ERPs; dispositivos de rede; transações bancárias; e dados de localiação (GPS). Todos estes dados poder ser agregados para análise e geração de informação.  
+
+### Como funciona?
+"Dados modernos" são gerados por uma infinidade de dispositivos distintos e, considerando estudos como Internet das Coisas, esta questão torna-se exponencial. Deste modo, se torna praticamente impossível a regulamentação ou padronização de estrutura de dados, visando controle de volume e frequência na geração dos dados. 
+
+Aplicações que analisam dados por streaming precisam processá-los individualmente ou por conjunto - segundo regras propostas - e em ordem sequencial. Deixando implícita a relevância destes sistemas serem preparados para tolerância à falhas. Cada parcela de dados gerada tratá sua fonte origem e timestamp, para habilitar aplicações a trabalharem corretamento com o streaming.
+
+#### Funções principais:
+- Storage (armazenamento): deve ser capaz de gravar grandes conjuntos de streaming de dadosde modo sequencial e consistente;
+- Processing (processamento): deve interagir com o storage, consumir, analisar e rodar lógicas computacionais em cima dos dados.
+
+### Principais desafios:
+Para o usuário final, o streaming de dados em tempo real precisa ter tanta qualidade quanto qualquer sistema rodando em batch, com dados já previamente armazenados em disco, cache ou DB. Para tanto, alguns aspectos da aplicação devem ser reconhecidos como obrigatórios.
+- Escalabilidade
+
+    - Um exemplo muito prático, é que à medida que falhas acontecem, a quantidade de dados de log podem passar de kilobits para gigabits/seg. Esta exponencialidade exige que a infraestrutura como um todo cresça e se adapte instatâneamente para que não hava nenhum sentido de perda de dados. 
+
+- Ordenação
+
+    - Parte não trivial para streaming em tempo real, principalmente porquê nem sempre a ordem dos dados que é enviada de uma fonte é a mesma ordem que chega ao destino.
+
+- Consistência e durabilidade
+
+    - Também um dos grandes desafios, considerando que qualquer dado gerado à qualquer hora ou volume, pode ser modificado, transferido para outro DC e enviado ao destino em outra parte do mundo.
+
+- Tolerância à falhas e garantias de dados
+
+    - Com dados vindos de inúmeras fontes, localizações, formatos e volumes, o sistema realmente está preparado para prevenir perturbações de um único ponto de falha? 
 
 ## KAFKA CLI 🔓
+O Apache Kafka veio como uma resposta inteligente e segura aos principais desafios do streaming de dados. 
+É um sistema de mensagems distribuídos, com alta vazão e capaz de gerar, analisar e monitorar dados em tempo real. 
+
+Pode ser visto como um sistema de publisher qsubscriber, como o Youtube, mas com mensagens, não vídeos.
+
+> <i>Em resumo, temos os tópicos (streaming específico); as mensagens (associadas a tópicos); producers (geram dados); e os consumers (se inscrevem em um ou mais tópicos para consumirem as mensagens)</i>
 
 ### Exemplos
 
