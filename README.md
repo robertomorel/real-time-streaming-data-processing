@@ -113,9 +113,9 @@ Regras:
 - Gere dados simultâneos de dois Produtores da classe Producer e dois produtores da classe Producer2.
 
 #### Para executar
-- Inicie o Zookeeper e o Kafka
-- Entre na pasta do projeto
-- Rode o comando
+- Inicie o Zookeeper e o Kafka;
+- Entre na pasta do projeto;
+- Rode o comando:
   ```bash
   python3 producer_consumer.py
   ```
@@ -126,9 +126,9 @@ Regras:
 - Pesquise como seria para salvar os dados em um banco de dados MySQL ou algum outro banco de dados relacional de sua preferência. Salve nesse banco (via consumidor) apenas as pessoas com nomes que começam com a letra J.
 
 #### Para executar
-- Inicie o Zookeeper e o Kafka
-- Entre na pasta do projeto
-- Rode o comando
+- Inicie o Zookeeper e o Kafka;
+- Entre na pasta do projeto;
+- Rode o comando:
   ```bash
   python3 producer_consumer_mongodb.py
   ```
