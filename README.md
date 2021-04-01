@@ -104,7 +104,13 @@ Utilizando os comandos (CLI) do Apache KAFKA, vamos criar o seguinte esquema de 
 ## Projetos 📥
 
 ### [Produtor Consumidor](/produtor-consumidor)
-- 
+Regras:
+- No consumidor (classe Consumer) imprima apenas as tuplas que possuem valores de IMC acima de 35 (IMC = peso/altura²);
+- Crie um novo produtor (classe Producer2, por exemplo) o qual gera um streaming contendo “nomes” e “salários” aleatórios no intervalo fixo de 4 segundos. Os nomes aleatórios podem ser gerados pela biblioteca Faker utilizada no curso e os salários devem estar no intervalo entre R$ 1.000,00 e R$ 3.000,00;
+- Crie um novo consumidor (classe Consumer2, por exemplo) o qual irá consumir os dados do novo produtor criado e imprimir o valor de cada tupla;
+- Altere o consumidor recém criado para imprimir apenas o nome das pessoas que recebem salários maiores que R$ 2.000,00;
+- Aumente a frequência de geração das tuplas para 2 segundos no Produtor 1 (classe Producer);
+- Gere dados simultâneos de dois Produtores da classe Producer e dois produtores da classe Producer2.
 
 ### [Produtor Consumidor - MongoDB](/produtor-consumidor-mongodb)
 - 
