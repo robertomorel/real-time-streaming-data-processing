@@ -116,6 +116,7 @@ Regras:
 - Inicie o Zookeeper e o Kafka;
 - Entre na pasta do projeto;
 - Rode o comando:
+
   ```bash
   python3 producer_consumer.py
   ```
@@ -129,6 +130,7 @@ Regras:
 - Inicie o Zookeeper e o Kafka;
 - Entre na pasta do projeto;
 - Rode o comando:
+
   ```bash
   python3 producer_consumer_mongodb.py
   ```
