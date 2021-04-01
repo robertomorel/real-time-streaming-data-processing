@@ -90,10 +90,15 @@ Utilizando os comandos (CLI) do Apache KAFKA, vamos criar o seguinte esquema de 
 - Consumidor 2: `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic vale3 --from-beginning`
 - Consumidor 3: `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic petr4 --from-beginning`
 
-#### Resultado esperado
+<hr>
+<b>
+  <p align="center">
+    RESULTADO ESPERADO
+  </p>
+</b>
 
 <div align="center">
-<img src="https://github.com/robertomorel/real-time-streaming-data-processing/blob/master/assets/kafka-zookeeper.gif" width="500"/>
+  <img src="https://github.com/robertomorel/real-time-streaming-data-processing/blob/master/assets/kafka-zookeeper.gif" width="600"/>
 </div>
 
 ## Projetos 📥
