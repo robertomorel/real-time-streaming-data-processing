@@ -40,7 +40,13 @@ O Apache Kafka veio como uma resposta inteligente e segura aos principais desafi
 
 Pode ser visto como um sistema de publisher qsubscriber, como o Youtube, mas com mensagens, não vídeos.
 
-> <i>Em resumo, temos os tópicos (streaming específico); as mensagens (associadas a tópicos); producers (geram dados); e os consumers (se inscrevem em um ou mais tópicos para consumirem as mensagens)</i>
+> <i>Em resumo, temos os tópicos (streaming específico); as mensagens (associadas a tópicos); producers (geram dados); os consumers (se inscrevem em um ou mais tópicos para consumirem as mensagens); e o Kafka em si (broker que funciona junto ao Zookeeper para gerenciar os tópicos)</i>
+
+### Setup do Kafka
+#### 1. Download
+bash```
+curl http://ftp.unicamp.br/pub/apache/kafka/2.7.0/kafka_2.12-2.7.0.tgz -o ~/Downloads/kafka.tgz
+```
 
 ### Exemplos
 
