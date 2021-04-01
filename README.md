@@ -113,7 +113,9 @@ Regras:
 - Gere dados simultâneos de dois Produtores da classe Producer e dois produtores da classe Producer2.
 
 ### [Produtor Consumidor - MongoDB](/produtor-consumidor-mongodb)
-- 
+Regras:
+- Inclua na geração de tuplas o nome das pessoas como primeiro atributo. A estrutura do seu arquivo json gerado via streaming será: nome, idade, altura e peso. O nome pode ser gerado pela biblioteca Faker;
+- Pesquise como seria para salvar os dados em um banco de dados MySQL ou algum outro banco de dados relacional de sua preferência. Salve nesse banco (via consumidor) apenas as pessoas com nomes que começam com a letra J.
 
 ### [Python Kafka](/python-kafka)
 - 
