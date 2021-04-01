@@ -92,6 +92,9 @@ Utilizando os comandos (CLI) do Apache KAFKA, vamos criar o seguinte esquema de 
 
 #### Resultado esperado
 
+<div align="center">
+<img src="https://github.com/robertomorel/real-time-streaming-data-processing/blob/master/assets/kafka-zookeeper.gif" width="500"/>
+</div>
 
 ## Projetos 📥
 
