@@ -2,11 +2,12 @@ import json
 import random
 import threading
 import time
-from faker import Faker
 
+from faker import Faker
 from kafka import KafkaConsumer, KafkaProducer
-from pymongo import MongoClient
 from json import loads
+
+from mysqlConf import cursor, insert_stmt, myConnection
 
 fake = Faker()
 
@@ -36,23 +37,28 @@ class Consumer(threading.Thread):
     # value_deserializer: deserializa o utf-8 do json
     def run(self):
         stream = KafkaConsumer(bootstrap_servers='localhost:9092', auto_offset_reset='latest', value_deserializer = lambda x: loads(x.decode('utf-8')))
-        client = MongoClient('localhost:27017')
-        collection = client.users.pessoas  # client.banco_de_dados.colecao
 
         stream.subscribe(['users'])
         for tuple in stream:
             msg = tuple.value
             # print(msg)
             if msg['nome'][0] == 'J':
-                collection.insert_one(msg)
-                print('{} added to {}'.format(msg, collection))
+                data = (msg['nome'], msg['idade'], msg['altura'], msg['peso'])
+                #cursor.execute(insert_stmt, data)
+                #print('Mensagem: {}'.format(msg))
+                for result in cursor.execute(insert_stmt, data):
+                    if result.with_rows:
+                        print("Linhas criadas pelo comando '{}':".format(
+                        result.statement))
+                        print(result.fetchall())
+                    else:
+                        print("Linhas com falhas '{}': {}".format(
+                        result.statement, result.rowcount))
+        myConnection.commit()                
 
 if __name__ == '__main__':
     threads = [
         Producer(),
-        # Producer(),
-        # Producer(),
-        # Producer(),
         Consumer()
     ]
 
