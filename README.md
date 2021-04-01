@@ -75,6 +75,24 @@ Utilizando os comandos (CLI) do Apache KAFKA, vamos criar o seguinte esquema de 
 
 <img src="https://raw.githubusercontent.com/robertomorel/real-time-streaming-data-processing/master/assets/kafka-cli.jpeg" alt="Esquema, Roberto's header" width="500"/>
 
+#### Criando tópicos
+- petr4: `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic petr4`
+- vale3: `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic vale3`
+
+> Para listar os tópicos existentes: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
+
+#### Criando produtores
+- Produtor 1: `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic petr4`
+- Produtor 2: `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic vale3`
+
+#### Criando consumidores
+- Consumidor 1: `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic vale3 --from-beginning`
+- Consumidor 2: `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic vale3 --from-beginning`
+- Consumidor 3: `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic petr4 --from-beginning`
+
+#### Resultado esperado
+
+
 ## Projetos 📥
 
 ### [Produtor Consumidor](/produtor-consumidor)
