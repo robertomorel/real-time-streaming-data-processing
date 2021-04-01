@@ -48,6 +48,28 @@ Pode ser visto como um sistema de publisher qsubscriber, como o Youtube, mas com
 curl http://ftp.unicamp.br/pub/apache/kafka/2.7.0/kafka_2.12-2.7.0.tgz -o ~/Downloads/kafka.tgz
 ```
 
+#### 2. Criar projeto 
+```bash
+mkdir kafka
+cd kafka
+tar -xvzf ~/Downloads/kafka.tgz --strip 1
+```
+
+#### 3. Abrir projeto ([VS Code](https://code.visualstudio.com/download))
+```bash
+code .
+```
+
+#### 4. Iniciando Zookeper
+```bash
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
+
+#### 5. Iniciando Kafka
+```bash
+bin/kafka-server-start.sh config/server.properties
+```
+
 ### Exemplos
 
 ## Projetos 📥
