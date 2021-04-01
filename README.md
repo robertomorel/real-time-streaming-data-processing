@@ -126,6 +126,11 @@ Regras:
 - Inclua na geração de tuplas o nome das pessoas como primeiro atributo. A estrutura do seu arquivo json gerado via streaming será: nome, idade, altura e peso. O nome pode ser gerado pela biblioteca Faker;
 - Pesquise como seria para salvar os dados em um banco de dados MySQL ou algum outro banco de dados relacional de sua preferência. Salve nesse banco (via consumidor) apenas as pessoas com nomes que começam com a letra J.
 
+#### Dependência
+Necessário o MySQL na máquina, deste modo, recomendamos o uso do docker.
+
+Clique [aqui](https://hub.docker.com/_/mysql) para realizar o setup do MySQL a partir de um container do DockerHub.
+
 #### Para executar
 - Inicie o Zookeeper e o Kafka;
 - Entre na pasta do projeto;
