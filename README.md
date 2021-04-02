@@ -199,6 +199,21 @@ value.converter.schemas.enable=true
   <img src="https://github.com/robertomorel/real-time-streaming-data-processing/blob/master/assets/kafka-connector.gif" width="850"/>
 </div>
 
+### [Streaming Dataframe](/streaming-df)
+Regras:
+- Média de valor investido nos municípios nos anos de 2010 e 2011
+- ID do município do IBGE que recebeu mais aportes, ou seja, mais investimentos ao longo de todos os anos
+- 10 municípios que menos receberam aportes ao longo de todos os anos
+
+#### Para executar
+- Inicie o Zookeeper e o Kafka;
+- Entre na pasta do projeto;
+- Rode o comando:
+
+  ```bash
+  /opt/spark/bin/spark-submit voos-dataframe.py
+  ```
+
 ## Bibliotecas 📚
 * [ Kafka ](https://kafka.apache.org/documentation/)
 * [ Spark ](https://spark.apache.org/docs/latest/)
