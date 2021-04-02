@@ -141,7 +141,35 @@ Clique [aqui](https://hub.docker.com/_/mysql) para realizar o setup do MySQL a p
   ```
 
 ### [Python Kafka](/python-kafka)
-- 
+Regras:
+- Implementar uma função em Python (ou na linguagem de sua preferência) que gere linhas aleatórias (por exemplo textos de log, ou de mensagens fake) de 10 em 10 segundos em um arquivo txt denominado source.txt. Em seguida crie um conector, utilizando Kafka, que será responsável por copiar tudo que for gerado no arquivo "source.txt" (pela sua função) para um outro arquivo denominado "destination.txt"
+
+#### Dependência
+- Abra o projeto do Kafka no [VS Code](https://code.visualstudio.com/download);
+- Altere o arquivo <b>config\connect-file-source.properties</b>
+```js
+name=local-file-source
+connector.class=FileStreamSource
+tasks.max=1
+file=source.txt
+topic=connect-od
+```
+- Altere o arquivo <b>config\connect-file-sink.properties</b>
+```js
+name=local-file-sink
+connector.class=FileStreamSink
+tasks.max=1
+file=destination.txt
+topics=connect-od
+```
+- Altere o arquivo <b>config\connect-standalone.properties</b>
+```js
+bootstrap.servers=localhost:9092
+key.converter=org.apache.kafka.connect.json.JsonConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+key.converter.schemas.enable=true
+value.converter.schemas.enable=true
+```
 
 ## Bibliotecas 📚
 * [ Kafka ](https://kafka.apache.org/documentation/)
