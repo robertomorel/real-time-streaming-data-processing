@@ -4,7 +4,7 @@ from faker import Faker
 from time import sleep
 
 fake = Faker()
-filePath = '/home/rober/workspace/kafka/origem.txt'
+filePath = '/home/rober/workspace/kafka/source.txt'
 
 def poll():
     while True:
@@ -13,7 +13,7 @@ def poll():
                 fake.name(), random.randint(1, 100))
         f.write(msg + '\n')
         f.close()
-        sleep(2)
+        sleep(5)
 
 if __name__ == '__main__':
   poll()   

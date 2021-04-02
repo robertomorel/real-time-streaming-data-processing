@@ -171,6 +171,34 @@ key.converter.schemas.enable=true
 value.converter.schemas.enable=true
 ```
 
+#### Para executar
+- Inicie o Zookeeper e o Kafka;
+- Entre na pasta do projeto;
+- Ainda no projeto do Kafka, iniciar o Source e o Sink connectors:
+
+  ```bash
+  ./bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
+  ```
+
+- Rode o comando:
+
+  ```bash
+  python3 write_on_file.py
+  ```
+
+> A aplicação irá escrever no arquivo 'source.txt' de 5 em 5s e o Kafka Connect irá se encarregar de pegar o conteúdo gerado e transferí-lo para o arquivo 'destination.txt'   
+
+<hr>
+<b>
+  <p align="center">
+    RESULTADO ESPERADO
+  </p>
+</b>
+
+<div align="center">
+  <img src="https://github.com/robertomorel/real-time-streaming-data-processing/blob/master/assets/kafka-connector.gif" width="850"/>
+</div>
+
 ## Bibliotecas 📚
 * [ Kafka ](https://kafka.apache.org/documentation/)
 * [ Spark ](https://spark.apache.org/docs/latest/)
