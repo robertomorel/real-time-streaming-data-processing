@@ -205,13 +205,65 @@ Regras:
 - ID do município do IBGE que recebeu mais aportes, ou seja, mais investimentos ao longo de todos os anos
 - 10 municípios que menos receberam aportes ao longo de todos os anos
 
+#### Criando Ambiente
+- Baixando Spark Hadoop
+
+  `wget https://downloads.apache.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop2.7.tgz ~/Downloads/spark-hadoop.tgz`
+
+- Extrair os arquivos
+
+  `tar -xvzf spark-*`
+
+- Mover os arquivos para o diretório ~ opt/spark
+
+  `sudo mv spark-3.1.1-bin-hadoop2.7 /opt/spark`
+
+##### Variáveis de Ambiente
+- Configurando variáveis
+
+  `echo "export SPARK_HOME=/opt/spark" >> ~/.profile`
+  
+  `echo "export PATH=$PATH:/opt/spark/bin:/opt/spark/sbin" >> ~/.profile`
+  
+  `echo "export PYSPARK_PYTHON=/usr/bin/python3" >> ~/.profile`
+
+- Testando variáveis
+
+  `source ~/.profile`
+
+##### Iniciando Spark
+- Master
+
+  `start-master.sh`
+
+- Trabalhador
+
+  `start-slave.sh spark://posgrad-vm:7077`
+
+- Para finalizar o serviço do spark
+
+  `stop-slave.sh`
+  
+  `stop-master.sh`  
+
+> Acessar localhost:8080 no navegador e visualizar o Worker ativo:
+
+##### Testando o Spark Shell
+- Rodar o comando: 
+
+  `pyspark`
+
+- Para sair
+
+  `exit()`
+
 #### Para executar
-- Inicie o Zookeeper e o Kafka;
+- Inicie o Spark Master e Worker;
 - Entre na pasta do projeto;
 - Rode o comando:
 
   ```bash
-  /opt/spark/bin/spark-submit voos-dataframe.py
+  /opt/spark/bin/spark-submit ans_streaming_df.py
   ```
 
 ## Bibliotecas 📚
